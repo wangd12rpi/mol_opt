@@ -1,0 +1,15 @@
+# input_file: ./main/SynNet/zinc.csv
+restart: False
+radius: 2
+nbits: 4096
+num_population: 4
+num_offspring: 512
+ncpu: 4
+mut_probability: 0.5
+num_mut_per_ele: 24
+sampling_iters: 24
+num_repeats: 3
+learning_rate: 0.001
+num_iters: 25
+ga_iters: 6
+num_offspring_multi: 6

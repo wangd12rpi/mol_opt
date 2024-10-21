@@ -118,6 +118,8 @@ def main(method,oracle_name):
         from main.graphinvent.run import GraphInvent_Optimizer as Optimizer
     elif args.method == "rationale_rl":
         from main.rationale_rl.run import Rationale_RL_Optimizer as Optimizer
+    elif args.method == 'synnet_mcpg':
+        from main.synnet_mcpg.run import SynNet_MCPG_Optimizer as Optimizer
     else:
         raise ValueError("Unrecognized method name.")
 
@@ -191,6 +193,6 @@ if __name__ == "__main__":
                         "Osimertinib_MPO", "Perindopril_MPO", "QED", "Ranolazine_MPO",
                         "Scaffold_Hop", "Sitagliptin_MPO", "Thiothixene_Rediscovery", 
                         "Troglitazone_Rediscovery", "Valsartan_Smarts", "Zaleplon_MPO"]: #["Zaleplon_MPO","Amlodipine_MPO","GSK3B"]:#["Thiothixene_Rediscovery","Troglitazone_Rediscovery","Valsartan_Smarts","Zaleplon_MPO","Amlodipine_MPO","GSK3B"]:
-        for method in ["reinvent_transformer","reinvent"]:
+        for method in ["synnet_mcpg", "reinvent_transformer","reinvent"]:
             main(method,oracle_name)
 
